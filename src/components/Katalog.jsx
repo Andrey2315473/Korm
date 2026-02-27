@@ -5,6 +5,7 @@ function Korm() {
 
     return (
 
+
         <div className='min-h-screen bg-white font-sans text-[#333]'>
 
 
@@ -29,6 +30,7 @@ function Korm() {
 
 export function CatalogKorm() {
     return (
+        <div>
         <div className='bg-white rounded-sm flex flex-col items-center p-2 group'>
             <div className='relative w-full mb-3 bg-[#f8f8f8] flex items-center justify-center rounded-md border border-gray-50'>
                 <img
@@ -44,8 +46,32 @@ export function CatalogKorm() {
             </div>
         </div>
 
-    );
+
+    
+    <div className='min-h-screen bg-white font-sans text-[#333]'>
+
+
+        <main className='max-w-7xl mx-auto px-4 py-10'>
+            <h1 className='text-3xl font-bold mb-8'>Каталог товаров</h1>
+
+            <div className='flex gap-3 mb-10'>
+                <button className='px-5 py-2 bg-[#e0f7fa] text-[#00838f] rounded-full text-[13px] font-bold'>Все корма</button>
+                <button className='px-5 py-2 bg-gray-100 text-gray-400 rounded-full text-[13px] hover:bg-gray-200 transition-colors'>Для кошек</button>
+                <button className='px-5 py-2 bg-gray-100 text-gray-400 rounded-full text-[13px] hover:bg-gray-200 transition-colors'>Для собак</button>
+            </div>
+
+            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8'>
+                {products.map((_, i) => (
+                    <CatalogKorm key={i}/>
+            ))}
+            </div>
+        </main>
+    </div>
+</div>
+  );
 }
+
+
 
 
 export default Korm
